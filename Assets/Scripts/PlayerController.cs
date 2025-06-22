@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour
 
     private void PlayerMovement()
     {
+        // Run Input
         movementInput = movementAction.ReadValue<Vector2>();
 
         if (movementInput != null)
@@ -68,6 +69,12 @@ public class PlayerController : MonoBehaviour
             playerAnimator.Jump();
             rb.useGravity = true;
             rb.AddForce(Vector3.up * force_value, ForceMode.Impulse);
+        }
+
+        //Handle sliding 
+        if (isGrounded && Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            playerAnimator.Slide();
         }
     }
 

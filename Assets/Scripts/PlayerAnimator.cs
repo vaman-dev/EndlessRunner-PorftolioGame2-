@@ -12,14 +12,19 @@ public class PlayerAnimator : MonoBehaviour
     public void SetForwardMovement(Vector2 movement)
     {
         bool isMoving = movement != Vector2.zero;
-        animator.SetBool("FWalk", isMoving);
+        animator.SetBool("Run", isMoving);
 
     }
-     
-     public void Jump()
-     {
-         animator.SetTrigger("Jump");
-     } 
+
+    public void Jump()
+    {
+        animator.SetTrigger("Jump");
+    }
+
+    public void Slide()
+    {
+        animator.SetTrigger("Slide"); 
+     }
 
    
 }
