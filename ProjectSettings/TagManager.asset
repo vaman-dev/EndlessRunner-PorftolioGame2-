@@ -6,6 +6,7 @@ TagManager:
   tags:
   - TriggerPoint
   - Hurdle
+  - DeathVolume
   layers:
   - Default
   - TransparentFX
